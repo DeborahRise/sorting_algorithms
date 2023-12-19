@@ -86,6 +86,8 @@ void swap_list(listint_t **head, listint_t **node1, listint_t *node2);
 int partition(int *array, int start, int end, size_t size);
 void quicky(int *array, int start, int end, size_t size);
 void helper_heap(int *array, int sub_array, int super_node, size_t size);
+void partition_sort_hoare(int *array, size_t size, int low, int high);
+int partition_hoare(int *array, size_t size, int low, int high);
 
 /* PROJECT FUNCTIONS*/
 void bubble_sort(int *array, size_t size);
