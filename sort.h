@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <math.h>
+#include <stdlib.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -20,6 +21,17 @@ typedef struct listint_s
 } listint_t;
 
 
+/**
+ * enum bool - struct for bool type
+ *@false: false is equivalent to 0
+ *@true: equivalent to 1
+ *Return: nothing
+ */
+typedef enum bool
+{
+	false = 0,
+	true
+} bool;
 
 /**
  * enum kind_e - Doubly linked list node
