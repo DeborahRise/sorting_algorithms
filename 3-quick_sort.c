@@ -29,16 +29,16 @@ void element_swap(int *a, int *b)
 int partition(int *array, int start, int end, size_t size)
 {
 	int i, j;
-	int pivot = array[end];
+	int *pivot = array + end;
 
 	i = start - 1;
 
-	for (j = start; j <= end - 1; j++)
+	for (j = start; j < end; j++)
 	{
-		if (array[j] < pivot)
+		if (array[j] < *pivot)
 		{
 			i++;
-			if (array[i] != array[j])
+			if (array[j] < array[i])
 			{
 				element_swap(array + i, array + j);
 				print_array(array, size);
@@ -46,7 +46,7 @@ int partition(int *array, int start, int end, size_t size)
 		}
 	}
 	i++;
-	if (array[i] != array[end])
+	if (array[i] > array[end])
 	{
 		element_swap(array + i, array + end);
 		print_array(array, size);
