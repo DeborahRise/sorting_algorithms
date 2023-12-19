@@ -16,6 +16,7 @@ void element_swap(int *a, int *b)
 	*b = temp;
 }
 
+
 /**
  * partition - the algorithm that helps with divide and conquer
  * technique
@@ -29,16 +30,16 @@ void element_swap(int *a, int *b)
 int partition(int *array, int start, int end, size_t size)
 {
 	int i, j;
-	int *pivot = array + end;
+	int pivot = array[end];
 
 	i = start - 1;
 
-	for (j = start; j < end; j++)
+	for (j = start; j <= end - 1; j++)
 	{
-		if (array[j] < *pivot)
+		if (array[j] < pivot)
 		{
 			i++;
-			if (array[j] < array[i])
+			if (array[i] != array[j])
 			{
 				element_swap(array + i, array + j);
 				print_array(array, size);
@@ -46,7 +47,7 @@ int partition(int *array, int start, int end, size_t size)
 		}
 	}
 	i++;
-	if (array[i] > array[end])
+	if (array[i] != array[end])
 	{
 		element_swap(array + i, array + end);
 		print_array(array, size);
@@ -55,8 +56,9 @@ int partition(int *array, int start, int end, size_t size)
 	return (i);
 }
 
+
 /**
- * partition - the algorithm that helps with divide and conquer
+ * quicky - the algorithm that helps with divide and conquer
  * technique
  * @array: the array to be sorted
  * @start: the first element to be sorted
@@ -64,6 +66,7 @@ int partition(int *array, int start, int end, size_t size)
  * @size: the size of the array
  * Return: the index for the next pivot.
  */
+
 
 void quicky(int *array, int start, int end, size_t size)
 {
@@ -76,6 +79,7 @@ void quicky(int *array, int start, int end, size_t size)
 	quicky(array, start, pivot - 1, size);
 	quicky(array, pivot + 1, end, size);
 }
+
 
 /**
  * quick_sort - the algorithm that helps with divide and conquer
