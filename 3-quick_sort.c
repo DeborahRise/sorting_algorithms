@@ -17,7 +17,13 @@ void element_swap(int *a, int *b)
 }
 
 /**
- *
+ * partition - the algorithm that helps with divide and conquer
+ * technique
+ * @array: the array to be sorted
+ * @start: the first element to be sorted
+ * @end: the last element to be reached during the quick sort
+ * @size: the size of the array
+ * Return: the index for the next pivot.
  */
 
 int partition(int *array, int start, int end, size_t size)
@@ -50,7 +56,13 @@ int partition(int *array, int start, int end, size_t size)
 }
 
 /**
- *
+ * partition - the algorithm that helps with divide and conquer
+ * technique
+ * @array: the array to be sorted
+ * @start: the first element to be sorted
+ * @end: the last element to be reached during the quick sort
+ * @size: the size of the array
+ * Return: the index for the next pivot.
  */
 
 void quicky(int *array, int start, int end, size_t size)
@@ -66,9 +78,12 @@ void quicky(int *array, int start, int end, size_t size)
 }
 
 /**
- *
+ * quick_sort - the algorithm that helps with divide and conquer
+ * technique
+ * @array: the array to be sorted
+ * @size: the size of the array
+ * Return: the index for the next pivot.
  */
-
 void quick_sort(int *array, size_t size)
 {
 	quicky(array, 0, (int)size - 1, size);
