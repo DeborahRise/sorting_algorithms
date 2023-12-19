@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stddef.h>
+#include <math.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -69,6 +70,7 @@ void print_list(const listint_t *list);
 
 /* Helper Functions*/
 void element_swap(int *a, int *b);
+void swap_list(listint_t **head, listint_t **node1, listint_t *node2);
 /* PROJECT FUNCTIONS*/
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
